@@ -1,12 +1,104 @@
+<!-- Created by Ibrahim Aji Fajar Romadhon -->
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio Website</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+    <header id="header">
+        <img src="https://picsum.photos/50/50" alt="Logo">
+        <ul id="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="#my-profile">My Profile</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#message-us">Message Us</a></li>
+        </ul>
+    </header>
+    <main>
+        <section id="my-profile">
+            <div class="profileContainer">
+                <div class="profileImage">
+                    <img src="asets/ibrahim.png" alt="Ibrahim Aji Fajar Romadhon" />
+                </div>
+                <div class="profileText">
+                    <h1>Hi, nama saya Ibrahim Aji Fajar Romadhon</h1>
+                    <p>Selamat datang di profil saya!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h1>Portfolio</h1>
+            <div class="portfolioContainer">
+                <div class="portfolioItem">
+                    <img src="https://picsum.photos/300/300" alt="Portfolio 1"/>
+                    <h3>Portfolio 1</h3>
+                </div>
+                <div class="portfolioItem">
+                    <img src="https://picsum.photos/301/300" alt="Portfolio 1" style="border-radius: 100%;"/>
+                    <h3>Portfolio 2</h3>
+                </div>
+                <div class="portfolioItem">
+                    <img src="https://picsum.photos/302/300" alt="Portfolio 1" style="border-radius: 100%;"/>
+                    <h3>Portfolio 3</h3>
+                </div>
+            </div>
+        </section>
+        
+        <section id="message-us">
+            <div id="messageUs">
+                <h1>Message Us</h1>
+            </div>
+                <div id="formContainer">
+                    <form id="inputForm" onsubmit="return displayInput()">
+                        <div>
+                            <label for="nama">Nama</label>
+                            <span>:</span>
+                            <input type="text" name="nama" id="nama" placeholder="Masukkan nama anda..." required>
+                        </div>
+            
+                        <div>
+                            <label for="tanggal">Tanggal Lahir</label>
+                            <span>:</span>
+                            <input type="date" name="tanggal" id="tanggal" required>
+                        </div>
+            
+                        <div>
+                            <label for="jk-laki">Jenis Kelamin</label>
+                            <span>:</span>
+                            <div id="radioContainer">
+                                <input type="radio" name="jk" id="jk-laki" value="Laki-Laki" required>Laki-Laki
+                                <input type="radio" name="jk" id="jk-perempuan" value="Perempuan">Perempuan
+                            </div>
+                        </div>
+            
+                        <div>
+                            <label for="pesan">Pesan</label>
+                            <span>:</span>
+                            <textarea name="pesan" id="pesan" placeholder="Masukkan pesan anda..."></textarea>
+                        </div>
+            
+                        <input type="submit" value="Submit">
+                    </form>
+            
+                    <div id="result">
+                        <h3>Hasil Inputan:</h3>
+                        <ul id="inputList" style="display: flex; flex-direction: column;"></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+            
+        </div>
+    </main>
+    <footer id="footer">
+        <p>Created by Ibrahim</p>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
