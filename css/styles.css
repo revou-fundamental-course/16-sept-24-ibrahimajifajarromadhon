@@ -50,6 +50,102 @@ main {
     padding: 50px;
 }
 
+#my-profile {
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.nav-arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.arrow {
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    padding: 20px;
+}
+
+.indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.indicator {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: white;
+}
+
+.profileContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 1000px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profileImage img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.profileText h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.profileText p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.portfolioContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolioContainer .portfolioItem {
+    padding: 10px;
+    text-align: center;
+}
+
+.portfolioContainer .portfolioItem img {
+    border-radius: 100%;
+}
+
+
 #messageUs {
     margin-top: 30px;
     margin-bottom: 20px;
@@ -129,68 +225,6 @@ main {
     padding: 0;
 }
 
-#my-profile {
-    background-image: url('https://picsum.photos/1920/1080');
-    background-size: cover;
-    background-position: center;
-    padding: 50px 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.profileContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    padding: 20px;
-    width: 80%;
-    max-width: 1000px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-}
-
-.profileImage img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 20px;
-}
-
-.profileText h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.profileText p {
-    font-size: 1.2rem;
-    color: #666;
-}
-
-.portfolioContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.portfolioContainer .portfolioItem {
-    padding: 10px;
-    text-align: center;
-}
-
-.portfolioContainer .portfolioItem img {
-    border-radius: 100%;
-}
-
 footer {
     display: flex; 
     justify-content: end; 
@@ -240,7 +274,7 @@ footer {
       margin-right: 0;
       margin-top: 10px;
     }
-  }
+}
 
 @media (max-width: 768px) {
     .profileContainer {
